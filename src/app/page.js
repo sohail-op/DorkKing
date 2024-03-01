@@ -16,52 +16,52 @@ function Page() {
 
   const boxesData = [
     {
-      url: `https://www.google.com/search?q=:${url} intitle:index.of`,
+      url: `https://www.google.com/search?q=${url} intitle:index.of`,
       title: "Directory Listing",
       icon: "/images/directory.png",
     },
     {
-      url: `https://www.google.com/search?q=:${url} intext:"sql syntax near" | intext:"syntax error has occurred" | intext:"incorrect syntax near" | intext:"unexpected end of SQL command" | intext:"Warning: mysql_connect()" | intext:"Warning: mysql_query()" | intext:"Warning: pg_connect()"`,
+      url: `https://www.google.com/search?q=${url} intext:"sql syntax near" | intext:"syntax error has occurred" | intext:"incorrect syntax near" | intext:"unexpected end of SQL command" | intext:"Warning: mysql_connect()" | intext:"Warning: mysql_query()" | intext:"Warning: pg_connect()"`,
       title: "Sql Error",
       icon: "/images/sql.png",
     },
     {
-      url: `https://www.google.com/search?q=:${url} inurl:login | inurl:signin | intitle:Login | intitle: signin | inurl:auth`,
+      url: `https://www.google.com/search?q=${url} inurl:login | inurl:signin | intitle:Login | intitle: signin | inurl:auth`,
       title: "Login pages",
       icon: "/images/login.png",
     },
     {
-      url: `https://www.google.com/search?q=:${url} ext:bkf | ext:bkp | ext:bak | ext:old | ext:backup`,
+      url: `https://www.google.com/search?q=${url} ext:bkf | ext:bkp | ext:bak | ext:old | ext:backup`,
       title: "Backup/Old Files",
       icon: "/images/backup.png",
     },
     {
-      url: `https://www.google.com/search?q=:${url} ext:sql | ext:dbf | ext:mdb`,
+      url: `https://www.google.com/search?q=${url} ext:sql | ext:dbf | ext:mdb`,
       title: "Database Files",
       icon: "/images/database.png",
     },
     {
-      url: `https://www.google.com/search?q=:${url} ext:xml | ext:conf | ext:cnf | ext:reg | ext:inf | ext:rdp | ext:cfg | ext:txt | ext:ora | ext:ini`,
+      url: `https://www.google.com/search?q=${url} ext:xml | ext:conf | ext:cnf | ext:reg | ext:inf | ext:rdp | ext:cfg | ext:txt | ext:ora | ext:ini`,
       title: "Config Files",
       icon: "/images/conf.png",
     },
     {
-      url: `https://www.google.com/search?q=:${url} ext:php intitle:phpinfo 'published by the PHP Group'`,
+      url: `https://www.google.com/search?q=${url} ext:php intitle:phpinfo 'published by the PHP Group'`,
       title: "phpinfo()",
       icon: "/images/php.png",
     },
     {
-      url: `https://www.google.com/search?q=:${url}  inurl:shell | inurl:backdoor | inurl:wso | inurl:cmd | shadow | passwd | boot.ini | inurl:backdoor`,
+      url: `https://www.google.com/search?q=${url}  inurl:shell | inurl:backdoor | inurl:wso | inurl:cmd | shadow | passwd | boot.ini | inurl:backdoor`,
       title: "Find Backdoor",
       icon: "/images/backdoor.png",
     },
     {
-      url: `https://www.google.com/search?q=:${url} inurl:redir | inurl:url | inurl:redirect | inurl:return | inurl:src=http | inurl:r=http`,
+      url: `https://www.google.com/search?q=${url} inurl:redir | inurl:url | inurl:redirect | inurl:return | inurl:src=http | inurl:r=http`,
       title: "Open Redirect",
       icon: "/images/redirect.png",
     },
     {
-      url: `https://www.google.com/search?q=:pastebin.com "${url}"`,
+      url: `https://www.google.com/search?q=pastebin.com "${url}"`,
       title: "Find in pastebin",
       icon: "/images/pastebin.jpeg",
     },
@@ -71,23 +71,23 @@ function Page() {
       icon: "/images/crt.sh.jpeg",
     },
     {
-      url: `https://www.google.com/search?q=:${url} inurl:wp-content | inurl:wp-includes`,
+      url: `https://www.google.com/search?q=${url} inurl:wp-content | inurl:wp-includes`,
       title: "Find WordPress #2",
       icon: "/images/wordpress.png",
     },
     {
-      url: `https://www.google.com/search?q=:${url} ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv`,
+      url: `https://www.google.com/search?q=${url} ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv`,
       title: "Exposed Docs",
       icon: "/images/document.png",
     },
     {
-      url: `https://www.google.com/search?q=:atlassian.net | https://www.google.com/search?q=:bitbucket.org "${url}"`,
+      url: `https://www.google.com/search?q=atlassian.net | https://www.google.com/search?q=bitbucket.org "${url}"`,
       title: "Bitbucket/Atlassian",
       icon: "/images/bitbucket.png,",
       // icon: "/images/atlassian.png"
     },
     {
-      url: `https://www.google.com/search?q=:stackoverflow.com "${url}"`,
+      url: `https://www.google.com/search?q=stackoverflow.com "${url}"`,
       title: "StackOverFlow",
       icon: "/images/stackoverflow.jpeg",
     },
@@ -117,7 +117,7 @@ function Page() {
       icon: "/images/swf.png",
     },
     {
-      url: `https://www.google.com/search?q=:.s3.amazonaws.com "${url}"`,
+      url: `https://www.google.com/search?q=.s3.amazonaws.com "${url}"`,
       title: "S3 Buckets",
       icon: "/images/S3.png",
     },
@@ -127,27 +127,27 @@ function Page() {
       icon: "/images/shodan.jpeg",
     },
     {
-      url: `https://www.google.com/search?q=:${url} filetype:wsdl | filetype:WSDL | ext:svc | inurl:wsdl | Filetype: ?wsdl | inurl:asmx?wsdl | inurl:jws?wsdl | intitle:_vti_bin/https://www.google.com/search?q=s.asmx?wsdl | inurl:_vti_bin/https://www.google.com/search?q=s.asmx?wsdl`,
+      url: `https://www.google.com/search?q=${url} filetype:wsdl | filetype:WSDL | ext:svc | inurl:wsdl | Filetype: ?wsdl | inurl:asmx?wsdl | inurl:jws?wsdl | intitle:_vti_bin/https://www.google.com/search?q=s.asmx?wsdl | inurl:_vti_bin/https://www.google.com/search?q=s.asmx?wsdl`,
       title: "API(WSDL)",
       icon: "/images/wsdl.png",
     },
     {
-      url: `https://www.google.com/search?q=:${url} filetype:config "apache"`,
+      url: `https://www.google.com/search?q=${url} filetype:config "apache"`,
       title: "Apache Config FIles",
       icon: "/images/apache.png",
     },
     {
-      url: `https://www.google.com/search?q=:${url} inurl:readme | inurl:license | inurl:install | inurl:setup | inurl:config`,
+      url: `https://www.google.com/search?q=${url} inurl:readme | inurl:license | inurl:install | inurl:setup | inurl:config`,
       title: "Install/Setup Files",
       icon: "/images/setup.png",
     },
     {
-      url: `https://www.google.com/search?q=:${url} ext:action | ext:struts | ext:do`,
+      url: `https://www.google.com/search?q=${url} ext:action | ext:struts | ext:do`,
       title: "Apache Struts RCE",
       icon: "/images/struuts.jpeg",
     },
     {
-      url: `https://www.google.com/search?q=:${url} inurl:"/phpinfo.php" | inurl:".htaccess"`,
+      url: `https://www.google.com/search?q=${url} inurl:"/phpinfo.php" | inurl:".htaccess"`,
       title: ".hcaccess/phpinfo()",
       icon: "/images/access.png",
     },
@@ -167,7 +167,7 @@ function Page() {
       icon: "/images/sourcecode.png",
     },
     {
-      url: `https://www.google.com/search?q=:github.com | https://www.google.com/search?q=:gitlab.com "${url}"`,
+      url: `https://www.google.com/search?q=github.com | https://www.google.com/search?q=gitlab.com "${url}"`,
       title: "Search GitLab & Github",
       icon: "/images/gitlab.png,",
       // icon: "/images/github.png,"
@@ -183,12 +183,12 @@ function Page() {
       icon: "/images/subdomains.png",
     },
     {
-      url: `https://www.google.com/search?q=:digitaloceanspaces.com "${url}"`,
+      url: `https://www.google.com/search?q=digitaloceanspaces.com "${url}"`,
       title: "Digital Ocean Space",
       icon: "/images/digitalocean.png",
     },
     {
-      url: `https://www.google.com/search?q=:*.*.${url}`,
+      url: `https://www.google.com/search?q=*.*.${url}`,
       title: "Sub-Subdomains (Google)",
       icon: "/images/subdomains.png,",
       // icon: "/images/subdomains.png"
